@@ -11,13 +11,13 @@ app = Flask(__name__)
 @app.route("/", methods=["GET","POST"])
 def home():
 	if request.form:
-        print(request.form)
+	    print(request.form)
     return render_template("index.html")
 
-@app.route("/profile", methods=["GET"])
+@app.route("/profile")
 def profile():
 	return render_template("profile.html")
 
-	
+
 if __name__ == "__main__":
     app.run(debug=True)
