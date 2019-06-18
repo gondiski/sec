@@ -1,5 +1,5 @@
 import os
-import sec
+from sec import secured
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -10,7 +10,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
 def home():
-	if request.form:
+	if request.method == 'POST':
+		client = secured(request.form['number'])
 		print(request.form)
 	return render_template("index.html")
 
