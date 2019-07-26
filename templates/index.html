@@ -23,9 +23,9 @@
 			padding: 8px 12px;
 			border-radius:5px;
 			min-width: 100px;
-			font-size: 95%;
+			font-size: 150%;
 		}
-		input[type='number']{
+		input[type='number'],[type='text']{
 			border-bottom: 1px solid black;
 			border-radius: 0;
 			margin-bottom: 5px;
@@ -64,9 +64,10 @@
 		<div class="three middle">
 			<h1 class="stripped">sendcrypt</h1>
 			<p>Send money without compromise.</p>
+			<br>
 			<form action="{{url_for('home')}}" method="POST">
 				<label for="">Number</label><br>
-				<input type="number" min="10" required="true" name="number"><br>
+				<input type="text" min-length="10" max-length="10" pattern="/d" required="true" name="number"><br>
 				<input type="submit" value="Register">
 			</form>
 		</div>
