@@ -38,7 +38,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 multidict==4.5.2
 oauthlib==3.0.1
-paramiko==2.5.0
+paramiko==2.10.1
 pbr==5.2.0
 Pillow==5.4.1
 pipenv==2018.11.26
